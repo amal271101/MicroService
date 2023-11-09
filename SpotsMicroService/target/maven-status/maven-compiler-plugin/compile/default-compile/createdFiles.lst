@@ -12,4 +12,3 @@ org/openapitools/OpenApiGeneratorApplication.class
 org/openapitools/api/SpotsApi.class
 org/openapitools/controller/SpotController.class
 org/openapitools/model/Spot.class
-org/openapitools/api/SpotsApiController.class

@@ -20,16 +20,32 @@ public class SpotEntity {
     @Column
     @NotNull
     private String name;
-    @Column
-    @NotNull
+    @Column(precision = 10, scale = 7)
     private BigDecimal latitude;
 
-    @Column
-    @NotNull
+
+    public BigDecimal getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(BigDecimal latitude) {
+        this.latitude = latitude;
+    }
+
+    public BigDecimal getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(BigDecimal longitude) {
+        this.longitude = longitude;
+    }
+
+    @Column(precision = 10, scale = 7)
     private BigDecimal longitude;
     @Column
     @NotNull
     private String description;
+
 
     public void setDescription(String description) {
         this.description = description;
