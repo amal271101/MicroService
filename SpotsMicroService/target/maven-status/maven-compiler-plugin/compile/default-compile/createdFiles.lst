@@ -1,0 +1,15 @@
+org/openapitools/mapper/SpotsMapper.class
+org/openapitools/repositories/SpotRepository.class
+org/openapitools/services/SpotServiceImplementation.class
+org/openapitools/api/ApiUtil.class
+org/openapitools/configuration/HomeController.class
+org/openapitools/entity/SpotEntity.class
+org/openapitools/services/SpotService.class
+org/openapitools/RFC3339DateFormat.class
+org/openapitools/mapper/SpotsMapperImpl.class
+org/openapitools/configuration/SpringDocConfiguration.class
+org/openapitools/OpenApiGeneratorApplication.class
+org/openapitools/api/SpotsApi.class
+org/openapitools/controller/SpotController.class
+org/openapitools/model/Spot.class
+org/openapitools/api/SpotsApiController.class

@@ -1,0 +1,112 @@
+
+openapi: 3.0.0
+info:
+  title: Favorite Spots Service
+  contact:
+    name: Spots
+    url: http://localhost:8080
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /spots:
+    post:
+      tags:
+        - Favorite Spots
+      summary: Create a Favorite Spot
+      operationId: createSpot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Spot'
+      responses:
+        '201':
+          description: Spot created successfully
+        '400':
+          description: Bad request
+          
+  /spots/{spot_id}:
+    get:
+      tags:
+        - Favorite Spots
+      summary: Get a Favorite Spot by ID
+      operationId: getSpot
+      parameters:
+        - name: spot_id
+          in: path
+          required: true
+          description: ID of the spot
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Spot'
+        '404':
+          description: Spot not found
+    put:
+      tags:
+        - Favorite Spots
+      summary: Update a Favorite Spot
+      operationId: updateSpot
+      parameters:
+        - name: spot_id
+          in: path
+          required: true
+          description: ID of the spot
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Spot'
+      responses:
+        '200':
+          description: Spot updated successfully
+        '404':
+          description: Spot not found
+    delete:
+      tags:
+        - Favorite Spots
+      summary: Delete a Favorite Spot
+      operationId: deleteSpot
+      parameters:
+        - name: spot_id
+          in: path
+          required: true
+          description: ID of the spot
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Spot deleted successfully
+        '404':
+          description: Spot not found
+
+components:
+  schemas:
+    Spot:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the spot
+        latitude:
+          type: number
+          description: Latitude of the spot
+        longitude:
+          type: number
+          description: Longitude of the spot
+        description:
+          type: string
+          description: Description of the spot
+      required:
+        - name
+        - coordinates
