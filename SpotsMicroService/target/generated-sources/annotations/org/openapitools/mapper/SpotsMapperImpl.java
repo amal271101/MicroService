@@ -7,7 +7,7 @@ import org.openapitools.model.Spot;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-11-09T18:41:49+0100",
+    date = "2023-11-09T18:53:10+0100",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 public class SpotsMapperImpl implements SpotsMapper {
